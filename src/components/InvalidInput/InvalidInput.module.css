@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+
+.invalid-input {
+  background-color: white;
+  opacity: 2;
+  border: 1px solid #384d48;
+  width: 70%;
+  padding: 5rem;
+  margin: 10rem auto;
+  height: auto;
+  z-index: 100;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.invalid-message {
+  z-index: 100;
+  height: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #384d48;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  border-radius: 12px;
+  border: 1px solid black;
+  color: white;
+
+  background-color: #384d48;
+}
+
+.invalid-input p {
+  padding: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.invalid-input button {
+  background-color: purple;
+  z-index: 100;
+}
+
+.invalid-input button {
+  width: 10rem;
+  align-self: flex-end;
+  padding: 0.5rem;
+  border-radius: 12px;
+  height: 3rem;
+  font-weight: 600;
+  background-color: #d8d4d5;
+  cursor: pointer;
+  background-color: #384d48;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1px solid;
+  color: white;
+}
+
+.invalid-input button:hover {
+  transform: scale(1.2);
+
+  transition: ease-in-out 0.3s;
+}
+
+.error {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0.5rem;
+}

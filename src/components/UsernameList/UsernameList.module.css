@@ -1,0 +1,12 @@
+.username-list {
+  width: 80%;
+  height: auto;
+  margin: 1rem auto;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #6e7271;
+  border-radius: 12px;
+  border: 1px solid black;
+}
