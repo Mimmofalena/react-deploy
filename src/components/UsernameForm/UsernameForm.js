@@ -72,7 +72,6 @@ const UsernameForm = (props) => {
           errorHandler={errorHandlerFunction}
           hideModal={hideBackdrop}
         >
-          'gesu infame'
           <p className={classes.error}>
             {/* {enteredUsername.length <= 0 || enteredAge.length <= 0
               ? invalidUsernameMessage
