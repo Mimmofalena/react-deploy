@@ -6,12 +6,6 @@ const UsernameForm = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
   const [invalidInput, setInvalidInput] = useState(false);
-  // const invalidUsernameMessage = (
-  //   <p className={classes.error}>Please, enter a valid username and age</p>
-  // );
-  // const invalidAgeMessage = (
-  //   <p className={classes.error}>Please, enter a Age which is greater than 0</p>
-  // );
 
   const invalidUsernameMessage = "Please, enter a valid username and age";
 
@@ -30,22 +24,14 @@ const UsernameForm = (props) => {
       username: enteredUsername,
       age: enteredAge,
     };
-    // console.log(usernameData.username);
+
     errorHandlerFunction(usernameData.username, usernameData.age);
 
     props.onSaveUsernameData(usernameData);
 
-    setEnteredUsername("");
-    setEnteredAge("");
-    // return usernameData;
+    // setEnteredUsername("");
+    // setEnteredAge("");
   };
-
-  // const errorHandlerFunction = () => {
-  //   if (enteredUsername.length === 0 && enteredAge.length === 0) {
-  //     setInvalidInput(true);
-  //     return;
-  //   }
-  // };
 
   const errorHandlerFunction = (username, age) => {
     if (username.length <= 0 || age.length <= 0) {
@@ -59,9 +45,10 @@ const UsernameForm = (props) => {
 
   const hideBackdrop = () => {
     setInvalidInput(false);
+    setEnteredUsername(enteredUsername);
+    setEnteredAge(enteredAge);
   };
-  console.log(+enteredAge);
-  console.log(+enteredAge <= 0 ? "invalidAgeMessage" : "");
+
   return (
     <div>
       {invalidInput === true && (
@@ -73,12 +60,12 @@ const UsernameForm = (props) => {
           hideModal={hideBackdrop}
         >
           <p className={classes.error}>
-            {/* {enteredUsername.length <= 0 || enteredAge.length <= 0
+            {enteredUsername.length <= 0 || enteredAge.length <= 0
               ? invalidUsernameMessage
-              : ""} */}
-            {+enteredAge < 0
+              : ""}
+            {enteredAge < 0
               ? "Please, enter a Age which is greater than 0"
-              : " Fanculo"}
+              : " "}
           </p>
         </InvalidInput>
       )}
@@ -98,7 +85,7 @@ const UsernameForm = (props) => {
             value={enteredAge}
             onChange={ageChangedHandler}
             name="age"
-            // type="number"
+            type="number"
             // min="0"
           ></input>
         </div>
