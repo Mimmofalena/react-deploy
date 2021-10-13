@@ -1,5 +1,7 @@
 ### Simple react app with the following features to practice my skills :
 
+-Build and deploy react
+
 -Practice the use of useState Hook
 
 -Input fields that shows an error if fields are not filled in
